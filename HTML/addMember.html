@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../CSS/css-home.css">
+ <title>Add Member</title>
+ <style>
+  .nav-list
+{
+  
+  background-color: rgb(175, 146, 52);
+  display: flex;
+  /* justify-content: center; */
+ align-items: center;
+
+}
+.nav-list li{
+  list-style: none;
+  padding: 13px 23px;
+  
+}
+.nav-list li a{
+ text-decoration: none;
+ font-size: 17px;
+ font-family:monospace;
+ color: rgb(6, 3, 141);
+ 
+}
+.nav-list li a:hover{
+ color: rgb(199, 52, 71);
+}
+.addMemberContainer
+{
+ display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(183, 236, 243);
+  width: 70%;
+  height: 80%;
+  border-radius: 10px;
+  margin: auto;
+}
+.addMemberContainer h3{
+ margin: 8% auto 9%;
+  color: #a5f1ec;
+  font-family: 'Montserrat', sans-serif;
+}
+.logoContainer img{
+  width: 100%;
+ 
+}
+.logoContainer
+{
+ 
+ width: 10%;
+ height: 10%;
+ margin: auto;
+}
+.addMemberContainer input[type=text], select {
+  width: 60%;
+  padding: 2% 2%;
+  margin: 3% 3% 5% 3%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.addMemberContainer input[type=password], select {
+  width: 24%;
+  padding: 3% 7%;
+  margin: 3% 3% 5% 3%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.addMemberContainer button {
+  width: 24%;
+  background: none;
+  color: white;
+  padding: 3% 7%;
+  cursor: pointer;
+  
+  margin: 3% 3% 10% 3%;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Balsamiq Sans;
+ 
+}
+
+.addMemberContainer button:hover {
+  background-color:grey;
+}
+.addMemberContainer label {
+  margin-left: 3%;
+  color: #a5f1ec;
+}
+ </style>
+</head>
+<body>
+ <section class="mainContainer" >
+  <div class="container1 background1">
+
+   
+  </div>
+
+  <div class="container2 background2">
+ <ul class="nav-list">
+  
+  <li><a href="../index.html">Home</a> </li>
+  <li><a href="inventory.html">Inventory</a> </li>
+  <li><a href="issueBook.html">Issue Book</a> </li>
+  <li><a href="issueBook.html">Issued Book List</a> </li>
+</ul>
+<div class="addMemberContainer">
+ <div class="logoContainer">
+  <img src="../images/admin.png" alt="logo">
+</div>
+<h3>Add Member</h3>
+<form >
+<label for="uname">Username</label>
+<input type="text" id="uname" name="username" >
+
+<label for="password">Password</label>
+<input type="password" id="password" name="password" >
+
+
+
+<button  type="button"  id="login">Log In</button>
+</form>
+</div>
+  </div>
+ </section>
+</body>
+</html>
