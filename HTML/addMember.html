@@ -4,46 +4,24 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../CSS/css-home.css">
+ <link rel="stylesheet" href="../CSS/css-structure.css">
  <title>Add Member</title>
  <style>
-  .nav-list
-{
   
-  background-color: rgb(175, 146, 52);
-  display: flex;
-  /* justify-content: center; */
- align-items: center;
-
-}
-.nav-list li{
-  list-style: none;
-  padding: 13px 23px;
-  
-}
-.nav-list li a{
- text-decoration: none;
- font-size: 17px;
- font-family:monospace;
- color: rgb(6, 3, 141);
- 
-}
-.nav-list li a:hover{
- color: rgb(199, 52, 71);
-}
 .addMemberContainer
 {
- display: flex;
+  display: flex;
   flex-direction: column;
-  border: 2px solid rgb(183, 236, 243);
-  width: 70%;
+  border: 2px solid rgb(95, 40, 3);
+  width: 50%;
   height: 80%;
   border-radius: 10px;
   margin: auto;
 }
 .addMemberContainer h3{
- margin: 8% auto 9%;
-  color: #a5f1ec;
-  font-family: 'Montserrat', sans-serif;
+ margin: 2% auto 3%;
+  color: #580712;
+  font-family:   sans-serif;
 }
 .logoContainer img{
   width: 100%;
@@ -51,25 +29,14 @@
 }
 .logoContainer
 {
- 
- width: 10%;
- height: 10%;
- margin: auto;
+ width: 15%;
+ height: 15%;
+ margin:  1% auto;
 }
-.addMemberContainer input[type=text], select {
-  width: 60%;
+.addMemberContainer input[type=text],[type=number], select {
+  width: 85%;
   padding: 2% 2%;
-  margin: 3% 3% 5% 3%;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-}
-.addMemberContainer input[type=password], select {
-  width: 24%;
-  padding: 3% 7%;
-  margin: 3% 3% 5% 3%;
+  margin: 1% 3% 3% 2%;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -77,9 +44,10 @@
   resize: vertical;
 }
 
+
 .addMemberContainer button {
-  width: 24%;
-  background: none;
+  width: 34%;
+  background: rgb(114, 105, 122);
   color: white;
   padding: 3% 7%;
   cursor: pointer;
@@ -98,7 +66,7 @@
 }
 .addMemberContainer label {
   margin-left: 3%;
-  color: #a5f1ec;
+  color: #0e052b;
 }
  </style>
 </head>
@@ -118,23 +86,29 @@
   <li><a href="issueBook.html">Issued Book List</a> </li>
 </ul>
 <div class="addMemberContainer">
+ <h3>Add Member</h3>
  <div class="logoContainer">
-  <img src="../images/admin.png" alt="logo">
+  <img src="../images/school-icon-png-14053.png" alt="logo">
 </div>
-<h3>Add Member</h3>
+
 <form >
-<label for="uname">Username</label>
-<input type="text" id="uname" name="username" >
+<label for="fname">Full Name</label>
+<input type="text" id="fname"  >
 
-<label for="password">Password</label>
-<input type="password" id="password" name="password" >
+<label for="email">Email </label>
+<input type="text" id="email" >
 
+<label for="phn">Phone Number</label>
+<input type="number" id="phn" >
 
+<label for="dept">Department</label>
+<input type="text" id="dept" >
 
-<button  type="button"  id="login">Log In</button>
+<button  type="button"  id="add">Add Member</button>
 </form>
 </div>
   </div>
  </section>
+ <script src="../JS/addMember.js"></script>
 </body>
 </html>

@@ -4,36 +4,55 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../CSS/css-home.css">
- <title>Add Member</title>
+ <link rel="stylesheet" href="../CSS/css-structure.css">
+ <title>inventory</title>
  <style>
-  .nav-list
+.booklist
 {
-  
-  background-color: rgb(175, 146, 52);
+   margin: 2% 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.booklist table
+{
+  width: 60%;
+}
+.filterContainer
+{
   display: flex;
-  /* justify-content: center; */
- align-items: center;
-
-}
-.nav-list li{
-  list-style: none;
-  padding: 13px 23px;
+  flex-direction: row;
   
 }
-.nav-list li a{
- text-decoration: none;
- font-size: 17px;
- font-family:monospace;
- color: rgb(6, 3, 141);
- 
+#avilable-filter
+{
+  margin: 2%;
 }
-.nav-list li a:hover{
- color: rgb(199, 52, 71);
+#subject-filter
+{
+  margin: 2%;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
 }
  </style>
 </head>
 <body>
- <section class="mainContainer" >
+ <div class="mainContainer" >
   <div class="container1 background1">
 
    
@@ -47,7 +66,39 @@
   <li><a href="issueBook.html">Issue Book</a> </li>
   <li><a href="issueBook.html">Issued Book List</a> </li>
 </ul>
+    <div class="filterContainer">
+     <div id="subject-filter">
+       <span>Subject Filter: </span>
+           <button class="btn active"> Show all</button>
+           <button class="btn" >C</button>
+           <button class="btn">JAVA</button>
+           <button class="btn"> DS</button>
+           <button class="btn">Thermodynamics</button>
+     </div>
+     <div id="avilable-filter">
+      <span>Availability Filter: </span>
+      <button class="btn active"> Show all</button>
+      <button class="btn" >Yes</button>
+      <button class="btn">No</button>
+     </div>
+    </div>
+     <div class="booklist">
+      <table >
+        <thead>
+            <th> SL No. </th>
+            <th> Book-Id </th>
+            <th>Book-Name</th>
+            <th>Dept</th>
+            <th>Availability</th>
+          </thead>
+          <tbody id="tb">
+
+          </tbody>
+    </table>
+     </div>
+    
   </div>
- </section>
+</div>
+ <script src="../JS/inventory.js"></script>
 </body>
 </html>

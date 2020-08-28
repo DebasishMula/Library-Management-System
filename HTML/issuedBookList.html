@@ -4,36 +4,24 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../CSS/css-home.css">
- <title>Add Member</title>
+ <link rel="stylesheet" href="../CSS/css-structure.css">
+ <title>Issued Book List</title>
  <style>
-  .nav-list
+   .issuedBooklist{
+   margin: 2% 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.issuedBooklist table
 {
-  
-  background-color: rgb(175, 146, 52);
-  display: flex;
-  /* justify-content: center; */
- align-items: center;
-
-}
-.nav-list li{
-  list-style: none;
-  padding: 13px 23px;
-  
-}
-.nav-list li a{
- text-decoration: none;
- font-size: 17px;
- font-family:monospace;
- color: rgb(6, 3, 141);
- 
-}
-.nav-list li a:hover{
- color: rgb(199, 52, 71);
+  width: 80%;
 }
  </style>
 </head>
 <body>
- <section class="mainContainer" >
+ <div class="mainContainer" >
   <div class="container1 background1">
 
    
@@ -47,7 +35,25 @@
   <li><a href="inventory.html">Inventory</a> </li>
   <li><a href="issueBook.html">Issue Book</a> </li>
 </ul>
+
+<div class="issuedBooklist">
+  <table >
+    <thead>
+        <th> SL No. </th>
+        <th> Book-Id </th>
+        <th>Date Of Issue</th>
+        <th>Member-Name</th>
+        <th>Dept</th>
+        <th>Email Id</th>
+        <th>Phone Number</th>
+      </thead>
+      <tbody id="tb">
+
+      </tbody>
+</table>
+ </div>
   </div>
- </section>
+</div>
+ <script src="../JS/issuedBookList.js"></script>
 </body>
 </html>

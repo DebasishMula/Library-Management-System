@@ -4,31 +4,58 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../CSS/css-home.css">
+ <link rel="stylesheet" href="../CSS/css-structure.css">
  <title>Add Member</title>
  <style>
-  .nav-list
+   .issueBookContainer
 {
-  
-  background-color: rgb(175, 146, 52);
   display: flex;
-  /* justify-content: center; */
- align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(95, 40, 3);
+  width: 40%;
+  height: 60%;
+  border-radius: 10px;
+  margin: auto;
+}
+.issueBookContainer h3{
+ margin: 2% auto 3%;
+  color: #580712;
+  font-family:   sans-serif;
+}
+.issueBookContainer input[type=text],[type=number],[type=date], select {
+  width: 85%;
+  padding: 2% 2%;
+  margin: 1% 3% 3% 2%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
-}
-.nav-list li{
-  list-style: none;
-  padding: 13px 23px;
+
+.issueBookContainer button {
+  width: 34%;
+  background: rgb(114, 105, 122);
+  color: white;
+  padding: 3% 7%;
+  cursor: pointer;
   
-}
-.nav-list li a{
- text-decoration: none;
- font-size: 17px;
- font-family:monospace;
- color: rgb(6, 3, 141);
+  margin: 3% 3% 10% 3%;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Balsamiq Sans;
  
 }
-.nav-list li a:hover{
- color: rgb(199, 52, 71);
+
+.issueBookContainer button:hover {
+  background-color:grey;
+}
+.issueBookContainer label {
+  margin-left: 3%;
+  color: #0e052b;
 }
  </style>
 </head>
@@ -47,7 +74,27 @@
   <li><a href="inventory.html">Inventory</a> </li>
   <li><a href="issuedBookList.html">Issued Book List</a> </li>
 </ul>
+
+  <div class="issueBookContainer">
+    <h3>Issue Book</h3>
+    <form >
+      <label for="bid">Book Id</label>
+      <input type="text" id="bid" placeholder="book id.." >
+      
+      
+      
+      <label for="phn">Phone Number</label>
+      <input type="number" id="phn" placeholder="Member's Register Phone Number..">
+      
+      <label for="date">Date</label>
+      <input type="date" id="date" >
+      
+      
+      <button  type="button"  id="add">Issue</button>
+      </form>
+  </div>
   </div>
  </section>
+ <script src="../JS/issueBook.js"></script>
 </body>
 </html>
